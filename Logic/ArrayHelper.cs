@@ -2,17 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
-
 namespace Logic
 {
     public static class ArrayHelper
     {
-        public static int FindCentralIndex(int[] array)
+        public static int? FindCentralIndex(int[] array)
         {
-            if (array == null) return -1;
+            if (array == null) return null;
 
-            
+
             for (int i = 0; i < array.Length; i++)
             {
 
@@ -25,7 +23,7 @@ namespace Logic
 
                     if (index == 0 || index == (array.Length - 1)) break;
 
-                    if (j < index )
+                    if (j < index)
                     {
                         leftSum += array[j];
                     }
@@ -36,14 +34,14 @@ namespace Logic
 
                 }
 
-                if(leftSum == rightSum && (index != 0 && index != (array.Length - 1)))
+                if (leftSum == rightSum && (index != 0 && index != (array.Length - 1)))
                 {
                     return index;
                 }
 
             }
 
-            return -1;
+            return null;
         }
     }
 }
