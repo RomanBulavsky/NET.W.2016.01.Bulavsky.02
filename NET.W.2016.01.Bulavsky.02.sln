@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logic.MS.Tests", "LogicTest
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logic", "Logic\Logic.csproj", "{319B6AD6-A6EF-42E7-83E6-F8CACF9F1115}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logic.NUnit.Tests", "ArrayHelper.NUnit.Tests\Logic.NUnit.Tests.csproj", "{1857DC22-7454-4D8A-85FF-0441E9726574}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logic.NUnit.Tests", "Logic.NUnit.Tests\Logic.NUnit.Tests.csproj", "{1857DC22-7454-4D8A-85FF-0441E9726574}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
