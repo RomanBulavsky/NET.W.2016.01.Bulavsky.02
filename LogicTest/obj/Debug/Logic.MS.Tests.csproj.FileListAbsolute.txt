@@ -1,0 +1,8 @@
+D:\EPAM\NET.W.2016.01.Bulavsky.02\LogicTest\bin\Debug\LogicTest.dll
+D:\EPAM\NET.W.2016.01.Bulavsky.02\LogicTest\bin\Debug\LogicTest.pdb
+D:\EPAM\NET.W.2016.01.Bulavsky.02\LogicTest\bin\Debug\Logic.dll
+D:\EPAM\NET.W.2016.01.Bulavsky.02\LogicTest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\EPAM\NET.W.2016.01.Bulavsky.02\LogicTest\bin\Debug\Logic.pdb
+D:\EPAM\NET.W.2016.01.Bulavsky.02\LogicTest\obj\Debug\LogicTest.dll
+D:\EPAM\NET.W.2016.01.Bulavsky.02\LogicTest\obj\Debug\LogicTest.pdb
+D:\EPAM\NET.W.2016.01.Bulavsky.02\LogicTest\obj\Debug\Logic.MS.Tests.csprojResolveAssemblyReference.cache

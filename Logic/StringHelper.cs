@@ -14,6 +14,8 @@ namespace Logic
 
         public static string CheatSolution(string str1, string str2)
         {
+            if (str1 == null || str2 == null) throw new NullReferenceException();
+
             string str = str1 + str2;
             
             str.OrderBy(c => c);
@@ -24,6 +26,8 @@ namespace Logic
 
         private static string Filter(string str1, string str2)
         {
+            if(str1 == null || str2 == null) throw new NullReferenceException();
+
             string str = str1 + str2;
             char[] strArray = str.ToCharArray();
 
@@ -68,12 +72,16 @@ namespace Logic
 
         private static string Sort(string str)
         {
+            if(str == null) throw new NullReferenceException();
+
             char[] a = str.ToCharArray();
             Array.Sort(a);
             return new string(a);
         }
     }
 }
+
+#region Conditions
 /*
  
     Для двух строк, включающих только символы от 'a'  до  'z', вернуть конкатенированную отсортированную по алфавиту строку, исключая повторяющиеся символы.
@@ -86,3 +94,5 @@ a = "abcdefghijklmnopqrstuvwxyz"
 Longest(a, a) -> "abcdefghijklmnopqrstuvwxyz
 
      */
+#endregion
+

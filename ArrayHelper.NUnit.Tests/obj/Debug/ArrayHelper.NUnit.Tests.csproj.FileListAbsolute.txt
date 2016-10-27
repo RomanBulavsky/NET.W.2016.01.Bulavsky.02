@@ -1,0 +1,9 @@
+D:\EPAM\NET.W.2016.01.Bulavsky.02\ArrayHelper.NUnit.Tests\bin\Debug\ArrayHelper.NUnit.Tests.dll
+D:\EPAM\NET.W.2016.01.Bulavsky.02\ArrayHelper.NUnit.Tests\bin\Debug\ArrayHelper.NUnit.Tests.pdb
+D:\EPAM\NET.W.2016.01.Bulavsky.02\ArrayHelper.NUnit.Tests\bin\Debug\nunit.framework.dll
+D:\EPAM\NET.W.2016.01.Bulavsky.02\ArrayHelper.NUnit.Tests\bin\Debug\nunit.framework.xml
+D:\EPAM\NET.W.2016.01.Bulavsky.02\ArrayHelper.NUnit.Tests\obj\Debug\ArrayHelper.NUnit.Tests.csprojResolveAssemblyReference.cache
+D:\EPAM\NET.W.2016.01.Bulavsky.02\ArrayHelper.NUnit.Tests\obj\Debug\ArrayHelper.NUnit.Tests.dll
+D:\EPAM\NET.W.2016.01.Bulavsky.02\ArrayHelper.NUnit.Tests\obj\Debug\ArrayHelper.NUnit.Tests.pdb
+D:\EPAM\NET.W.2016.01.Bulavsky.02\ArrayHelper.NUnit.Tests\bin\Debug\Logic.dll
+D:\EPAM\NET.W.2016.01.Bulavsky.02\ArrayHelper.NUnit.Tests\bin\Debug\Logic.pdb

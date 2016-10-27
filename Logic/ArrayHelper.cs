@@ -6,9 +6,9 @@ namespace Logic
 {
     public static class ArrayHelper
     {
-        public static int? FindCentralIndex(int[] array)
+        public static int? FindCoreIndex(int[] array)
         {
-            if (array == null) return null;
+            if (array == null) throw new NullReferenceException();
 
 
             for (int i = 0; i < array.Length; i++)
@@ -45,6 +45,8 @@ namespace Logic
         }
     }
 }
+
+#region Conditions
 /*
  Дан массив целых чисел. Найти в массиве и вернуть такой индекс n, для которого сумма элементов слева 
  от него равно сумме элементов справа. Если такого индекса нет вернуть null (-1).
@@ -59,3 +61,5 @@ namespace Logic
 Выходные данные: Наименьший индекс, для которого сторона слева равна стороне справа. Если такого индекса не существует вернуть -1(null).
 
      */
+#endregion
+

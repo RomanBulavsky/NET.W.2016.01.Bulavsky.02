@@ -6,12 +6,14 @@ namespace Logic
 {
     public static class BitMixer
     {
-        public static int InsertationByChars(int a, int b, int i, int j)
+        //int numberA, int numberB, int iPosition, int jPosition
+        public static int InsertationByChars(int numberA, int numberB, int i, int j)
         {
+
             char[] baseArray = new char[32];
             baseArray = Enumerable.Repeat('0', 32).ToArray();// 0{32}
 
-            string strA = Convert.ToString(a, 2);
+            string strA = Convert.ToString(numberA, 2);
             char[] charA = new char[32];
             baseArray.CopyTo(charA, 0);
 
@@ -20,7 +22,7 @@ namespace Logic
 
 
 
-            string strB = Convert.ToString(b, 2);
+            string strB = Convert.ToString(numberB, 2);
             char[] charB = new char[32];
             baseArray.CopyTo(charB, 0);
 
@@ -40,11 +42,11 @@ namespace Logic
             return Convert.ToInt32(new string(charA), 2);
 
         }
-        public static int InsertationByBitArray(int a, int b, int i, int j)
+        public static int InsertationByBitArray(int numberA, int numberB, int i, int j)
         {
 
-            byte[] arra = BitConverter.GetBytes(a);
-            byte[] arrb = BitConverter.GetBytes(b);
+            byte[] arra = BitConverter.GetBytes(numberA);
+            byte[] arrb = BitConverter.GetBytes(numberB);
             var bitsA = new BitArray(arra);
             var bitsB = new BitArray(arrb);
 
@@ -60,15 +62,16 @@ namespace Logic
 
             int[] arr = new int[1];
             bitsA.CopyTo(arr, 0);
-            a = arr[0];
-            return a;
+            numberA = arr[0];
+            return numberA;
            
 
         }
     }
 }
+
+#region Conditions
 /*
- 
     Даны два целых знаковых четырехбайтовых числа и две позиции битов i и j (i<j).
     Реализовать алгоритм вставки одного числа в другое так, чтобы второе число 
     занимало позицию с бита j по бит i (биты нумеруются справа налево).
@@ -87,3 +90,4 @@ Insertion(15, -15, 0, 4) -> 31 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 Insertion(15, int.MaxValue, 3, 5)->63
 
      */
+#endregion
