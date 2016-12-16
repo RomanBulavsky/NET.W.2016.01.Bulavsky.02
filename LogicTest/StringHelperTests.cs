@@ -57,7 +57,7 @@ namespace LogicTest
         }
 
         [TestMethod]
-        [ExpectedException(typeof(NullReferenceException))]
+        [ExpectedException(typeof(ArgumentNullException))]
         public void FilterNSort_NullInString_Exception()
         {
             result = Longest(null, null);

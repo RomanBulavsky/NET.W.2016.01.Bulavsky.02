@@ -5,7 +5,6 @@ namespace Logic
 {
     public static class StringHelper
     {
-        
         public static string Longest(string str1, string str2)
         {
             string str = Filter(str1, str2);
@@ -17,29 +16,26 @@ namespace Logic
             if (str1 == null || str2 == null) throw new NullReferenceException();
 
             string str = str1 + str2;
-            
+
             str.OrderBy(c => c);
-            string x = String.Concat(str.Distinct().OrderBy(c => c));// 1 line 1 solution
+            string x = String.Concat(str.Distinct().OrderBy(c => c)); // 1 line 1 solution
 
             return x;
         }
 
         private static string Filter(string str1, string str2)
         {
-            if(str1 == null || str2 == null) throw new NullReferenceException();
-
+            if (str1 == null || str2 == null) throw new ArgumentNullException();
+            if(!(str1.ToCharArray().All(char.IsLetter) && str2.ToCharArray().All(char.IsLetter))) throw new ArgumentException();
             string str = str1 + str2;
             char[] strArray = str.ToCharArray();
-
-            char[] resultArray = new char[100];//TODO:
-
+            char[] resultArray = new char[100]; //TODO: why 100?)
             bool contain = false;
             int j = 0;
 
             for (int i = 0; i < strArray.Length; i++)
             {
                 char symbol = strArray[i];
-
                 foreach (var resultSymbol in resultArray)
                 {
                     if (symbol.Equals(resultSymbol))
@@ -47,33 +43,22 @@ namespace Logic
                         contain = true;
                         break;
                     }
-
                 }
-
                 if (!contain)
-                {
                     resultArray[j++] = symbol;
-
-                }
                 contain = false;
-
             }
-            //TODO:
+            //TODO:?
             char[] a = new char[j];
-
             for (int i = 0; i < j; i++)
-            {
                 a[i] = resultArray[i];
-            }
-
 
             return new string(a);
         }
 
         private static string Sort(string str)
         {
-            if(str == null) throw new NullReferenceException();
-
+            if (str == null) throw new ArgumentNullException();
             char[] a = str.ToCharArray();
             Array.Sort(a);
             return new string(a);
@@ -82,6 +67,7 @@ namespace Logic
 }
 
 #region Conditions
+
 /*
  
     Для двух строк, включающих только символы от 'a'  до  'z', вернуть конкатенированную отсортированную по алфавиту строку, исключая повторяющиеся символы.
@@ -94,5 +80,5 @@ a = "abcdefghijklmnopqrstuvwxyz"
 Longest(a, a) -> "abcdefghijklmnopqrstuvwxyz
 
      */
-#endregion
 
+#endregion

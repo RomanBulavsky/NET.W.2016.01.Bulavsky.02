@@ -9,26 +9,21 @@ namespace Logic
     {
         public static int? FindCoreIndex(int[] array)
         {
-            if (array == null) throw new NullReferenceException();
-
+            if (array == null) throw new ArgumentNullException();
             for (var i = 0; i < array.Length; i++)
             {
                 int leftSum = 0, rightSum = 0, index = i;
-
                 for (var j = 0; j < array.Length; j++)
                 {
                     if (index == 0 || index == (array.Length - 1)) break;
-
                     if (j < index)
                         leftSum += array[j];
                     else if (j > index)
                         rightSum += array[j];
                 }
-
                 if (leftSum == rightSum && (index != 0 && index != (array.Length - 1)))
                     return index;
             }
-
             return null;
         }
     }

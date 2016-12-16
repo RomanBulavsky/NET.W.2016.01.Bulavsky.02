@@ -1,6 +1,6 @@
 ﻿using System;
 using NUnit.Framework;
-using static  Logic.StringHelper;
+using static Logic.StringHelper;
 
 namespace ArrayHelper.NUnit.Tests
 {
@@ -20,18 +20,26 @@ namespace ArrayHelper.NUnit.Tests
         }
 
 
-
-        [TestCase(null,null)]
+        [TestCase(null, null)]
         [TestCase("asd", null)]
         [TestCase(null, "asd")]
-        public void Longest_Nulls_NullRefException(string str1,string str2)
+        public void Longest_Nulls_ArgNullException(string str1, string str2)
         {
-        Assert.That(() => Longest(str1,str2), Throws.TypeOf<NullReferenceException>());
+            Assert.That(() => Longest(str1, str2), Throws.TypeOf<ArgumentNullException>());
         }
-
+        
+        [TestCase("asd12", "as12d")]
+        [TestCase("asd", "as12d")]
+        [TestCase("asd12", "as")]
+        public void Longest_Nulls_ArgException(string str1, string str2)
+        {
+            Assert.That(() => Longest(str1, str2), Throws.TypeOf<ArgumentException>());
+        }
     }
 }
+
 #region FixtureSource
+
 /*
 [TestFixtureSource("FixtureArgs")]
 class BitMixerTests
@@ -43,4 +51,5 @@ class BitMixerTests
     };
 }
 */
+
 #endregion
