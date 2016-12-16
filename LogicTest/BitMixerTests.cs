@@ -11,23 +11,23 @@ namespace LogicTest
         [TestMethod]
         public void InsertationByBitArray_Test()
         {
-            int result = InsertationByBitArray(8, 15, 0, 0);
+            int result = InsertionByBitArray(8, 15, 0, 0);
 
             Assert.AreEqual(result, 9);
 
-            result = InsertationByBitArray(0, -15, 30, 30);
+            result = InsertionByBitArray(0, -15, 30, 30);
 
             Assert.AreEqual(result, 1073741824);
 
-            result = InsertationByBitArray(0, 15, 0, 30);
+            result = InsertionByBitArray(0, 15, 0, 30);
 
             Assert.AreEqual(result, 15);
 
-            result = InsertationByBitArray(15, -15, 4, 4);
+            result = InsertionByBitArray(15, -15, 4, 4);
 
             Assert.AreEqual(result, 31);
 
-            result = InsertationByBitArray(15, int.MaxValue, 3, 5);
+            result = InsertionByBitArray(15, int.MaxValue, 3, 5);
 
             Assert.AreEqual(result, 63);
 
@@ -36,23 +36,23 @@ namespace LogicTest
         [TestMethod]
         public void InsertationByChars_Test()
         {
-            int result = InsertationByChars(8, 15, 0, 0);
+            int result = InsertionByChars(8, 15, 0, 0);
 
             Assert.AreEqual(result, 9);
 
-            result = InsertationByChars(0, -15, 30, 30);
+            result = InsertionByChars(0, -15, 30, 30);
 
             Assert.AreEqual(result, 1073741824);
 
-            result = InsertationByChars(0, 15, 0, 30);
+            result = InsertionByChars(0, 15, 0, 30);
 
             Assert.AreEqual(result, 15);
 
-            result = InsertationByChars(15, -15, 4, 4);
+            result = InsertionByChars(15, -15, 4, 4);
 
             Assert.AreEqual(result, 31);
 
-            result = InsertationByChars(15, int.MaxValue, 3, 5);
+            result = InsertionByChars(15, int.MaxValue, 3, 5);
 
             Assert.AreEqual(result, 63);
         }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+
 namespace Logic
 {
     public static class ArrayHelper
@@ -10,35 +11,22 @@ namespace Logic
         {
             if (array == null) throw new NullReferenceException();
 
-
-            for (int i = 0; i < array.Length; i++)
+            for (var i = 0; i < array.Length; i++)
             {
+                int leftSum = 0, rightSum = 0, index = i;
 
-                int leftSum = 0;
-                int rightSum = 0;
-                int index = i;
-
-                for (int j = 0; j < array.Length; j++)
+                for (var j = 0; j < array.Length; j++)
                 {
-
                     if (index == 0 || index == (array.Length - 1)) break;
 
                     if (j < index)
-                    {
                         leftSum += array[j];
-                    }
                     else if (j > index)
-                    {
                         rightSum += array[j];
-                    }
-
                 }
 
                 if (leftSum == rightSum && (index != 0 && index != (array.Length - 1)))
-                {
                     return index;
-                }
-
             }
 
             return null;
@@ -47,6 +35,7 @@ namespace Logic
 }
 
 #region Conditions
+
 /*
  Дан массив целых чисел. Найти в массиве и вернуть такой индекс n, для которого сумма элементов слева 
  от него равно сумме элементов справа. Если такого индекса нет вернуть null (-1).
@@ -61,5 +50,5 @@ namespace Logic
 Выходные данные: Наименьший индекс, для которого сторона слева равна стороне справа. Если такого индекса не существует вернуть -1(null).
 
      */
-#endregion
 
+#endregion
